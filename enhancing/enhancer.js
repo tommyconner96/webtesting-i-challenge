@@ -1,11 +1,11 @@
 module.exports = {
-  succeed,
+  success,
   fail,
   repair,
   get,
 };
 
-function succeed(item) {
+function success(item) {
   return { ...item };
 }
 
@@ -14,7 +14,7 @@ function fail(item) {
 }
 
 function repair(item) {
-  return { ...item };
+  return { ...item, durability: 100 };
 }
 
 function get(item) {

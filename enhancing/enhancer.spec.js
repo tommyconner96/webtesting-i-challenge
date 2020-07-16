@@ -76,7 +76,7 @@ describe('fail', function () {
      })
 
      it('should decrease durability by 10 IF enhancement >= 15', function () {
-          // this one will decrease durability by 10 because it is gerater than 15
+          // this one will decrease durability by 10 because it is greater than 15
           expect(testSuccess.enhancement).toBe(16)
           expect(enhancer.fail(testSuccess))
                .toEqual({
@@ -85,7 +85,8 @@ describe('fail', function () {
                })
      })
      it('should decrease enhancement level by 1 if it is greater than 16', function () {
-          // this one will decrease durability by 10 because it is gerater than 15
+          // this one will change the enhancement level from 19 to 18, and still also
+          // change the durability from 75 to 65
           expect(testFail2.enhancement).toBe(19)
           expect(enhancer.fail(testFail2))
                .toEqual({
